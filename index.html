@@ -5,41 +5,44 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css" />
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
         <title>Ai Portuguese poem generator</title>
     </head>
 
     <body>
+        <div class="container">
 
-        <header>
-            <h1> AI Portuguese Poem Generator </h1>
-        </header>
+            <header>
+                <h1> AI Portuguese Poem Generator </h1>
+            </header>
 
-        <main>
-            <form>
-                <input type="text" placeholder="Enter a topic... " autofocus required autocomplete="off" />
-                <input type="submit" />
-            </form>
-            <div>
-                Cai o silêncio nos ombros e a luz
-                impura, até doer.
-                <br />
-                É urgente o amor, é urgente
-                permanecer.
-            </div>
+            <main>
+                <form id="poem-generator-form">
+                    <input type="text" placeholder="Enter a topic... " autofocus required autocomplete="off" />
+                    <input type="submit" />
+                </form>
+                <div id="poem">
+                    Cai o silêncio nos ombros e a luz
+                    impura, até doer.
+                    <br />
+                    É urgente o amor, é urgente
+                    permanecer.
+                </div>
 
-        </main>
-
-
-        <footer>
-            This website was coded by <a href="https://www.shecodes.io/graduates/105285-angela-mugabe">Angela
-                Mugabe</a>, is open source on <a
-                href="https://github.com/anglmugabe/ai-portuguese-poem-generator">github </a> and hosted on <a
-                href="https://portugues-ai-poem-generator.netlify.app/">
-                Netlify</a>
+            </main>
 
 
-        </footer>
-        <script src="index.js"> </script>
+            <footer>
+                This website was coded by <a href="https://www.shecodes.io/graduates/105285-angela-mugabe">Angela
+                    Mugabe</a>, is open source on <a
+                    href="https://github.com/anglmugabe/ai-portuguese-poem-generator">github </a> and hosted on <a
+                    href="https://portugues-ai-poem-generator.netlify.app/">
+                    Netlify</a>
+
+
+            </footer>
+            <script src="index.js"> </script>
+        </div>
 
     </body>
 
