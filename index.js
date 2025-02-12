@@ -14,7 +14,7 @@ function generatePoem(event) {
 	let apiKey = "cadc0335bc0tc128c364a2674f06oeee";
 	let prompt = `User instructions are to generate a Portuguese poem about ${instructionsInput.value}`;
 	let context =
-		"You're a skilled Portuguese poet specializing in traditional poetry formats. Create a poem based on the user's topic with the following structure: 2 stanzas of 4 lines each. Format each stanza in a <p> tag and use <br/> for line breaks.";
+		"You're a skilled Portuguese poet specializing in traditional poetry formats. Create a poem based on the user's topic with the following structure: 2 stanzas of 4 lines each. Format each stanza in a <p> tag and use <br/> for line breaks. Sign the poem with 'SheCodes AI' inside a <strong> element at the end of the poem and NOT at the beginning.";
 
 	let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
