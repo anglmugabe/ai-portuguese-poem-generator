@@ -1,16 +1,10 @@
 function displayPoem(response) {
-	console.log("poem generated");
-
-	let poemElement = document.querySelector("#poem"); // Get the correct element
-	poemElement.innerHTML = ""; // Clear previous poem
-
-	let typewriter = new Typewriter(poemElement, {
+	new Typewriter("#poem", {
+		strings: response.data.answer,
 		autoStart: true,
-		delay: 50, // Adjust typing speed
-		cursor: "", // Hide cursor
+		delay: 1,
+		cursor: " ",
 	});
-
-	typewriter.typeString(response.data.answer).start();
 }
 
 function generatePoem(event) {
@@ -24,7 +18,10 @@ function generatePoem(event) {
 
 	let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-	console.log("generating poem...");
+	let poemElement = document.querySelector("#poem");
+	poemElement.classList.remove("hidden");
+	poemElement.innerHTML = `<div class=generating>⏳Generating a Portuguese poem about ${instructionsInput.value}</div>`;
+
 	axios.get(apiUrl).then(displayPoem);
 }
 
